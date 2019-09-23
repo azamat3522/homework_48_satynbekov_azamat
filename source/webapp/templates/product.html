@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{#{% block menu %}#}
+{#    <li><a href="{% url 'product_update' product.pk %}">Edit</a></li>#}
+{#{% endblock %}#}
+
+{% block content %}
+    <h1 class="my-3">{{ product.name }}</h1>
+    <p>Категория: {{ product.get_category_display }}</p>
+    <p>Цена: {{ product.price }} сом</p>
+    <p>Остаток: {{ product.balance }} шт.</p>
+    <div class="pre">{{ product.description }}</div>
+{% endblock %}
